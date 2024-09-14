@@ -1,0 +1,100 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ .container {
+     width: 95%;
+     margin: 0 auto;
+ }
+
+ body {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(217%2c 83%2c 79%2c 1)'%3e%3c/rect%3e%3cpath d='M409.654%2c466.087C518.419%2c469.869%2c618.978%2c409.561%2c674.82%2c316.149C732.201%2c220.163%2c746.565%2c97.534%2c686.285%2c3.342C629.536%2c-85.332%2c514.71%2c-105.03%2c409.654%2c-98.193C317.66%2c-92.206%2c236.041%2c-43.625%2c189.071%2c35.701C141.116%2c116.69%2c131.683%2c214.994%2c174.613%2c298.756C221.628%2c390.488%2c306.638%2c462.505%2c409.654%2c466.087' fill='rgba(227%2c 117%2c 58%2c 0.33)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M977.119%2c877.478C1022.38%2c877.236%2c1064.487%2c853.195%2c1086.58%2c813.691C1108.176%2c775.077%2c1105.973%2c727.126%2c1082.006%2c689.937C1059.833%2c655.532%2c1018.046%2c644.417%2c977.119%2c643.843C934.881%2c643.251%2c890.08%2c651.536%2c867.01%2c686.922C842.043%2c725.217%2c842.741%2c775.289%2c865.613%2c814.871C888.471%2c854.429%2c931.433%2c877.722%2c977.119%2c877.478' fill='rgba(227%2c 117%2c 58%2c 0.33)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1458.949%2c72.136C1498.311%2c72.187%2c1542.93%2c68.578%2c1562.46%2c34.403C1581.901%2c0.383%2c1563.129%2c-40.305%2c1542.095%2c-73.364C1522.984%2c-103.4%2c1494.533%2c-127.22%2c1458.949%2c-128.284C1421.54%2c-129.403%2c1386.767%2c-110.211%2c1366.717%2c-78.609C1345.039%2c-44.442%2c1334.785%2c-0.382%2c1355.903%2c34.134C1376.382%2c67.605%2c1419.71%2c72.085%2c1458.949%2c72.136' fill='rgba(227%2c 117%2c 58%2c 0.33)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1597 1067.95 a279.18 279.18 0 1 0 558.36 0 a279.18 279.18 0 1 0 -558.36 0z' fill='rgba(227%2c 117%2c 58%2c 0.33)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M83.62 1006.73 a189.47 189.47 0 1 0 378.94 0 a189.47 189.47 0 1 0 -378.94 0z' fill='rgba(227%2c 117%2c 58%2c 0.33)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1276.341%2c984.979C1322.028%2c984.416%2c1367.017%2c964.909%2c1389.303%2c925.023C1411.122%2c885.973%2c1403.293%2c838.129%2c1379.587%2c800.195C1357.355%2c764.618%2c1318.293%2c744.263%2c1276.341%2c744.259C1234.382%2c744.255%2c1195.734%2c764.869%2c1173.064%2c800.177C1148.256%2c838.815%2c1136.053%2c887.785%2c1158.453%2c927.867C1181.284%2c968.719%2c1229.546%2c985.555%2c1276.341%2c984.979' fill='rgba(227%2c 117%2c 58%2c 0.33)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1436.319%2c328.656C1476.654%2c328.596%2c1517.764%2c315.789%2c1538.858%2c281.409C1560.83%2c245.597%2c1559.862%2c199.358%2c1537.457%2c163.816C1516.362%2c130.352%2c1475.846%2c117.181%2c1436.319%2c118.749C1399.683%2c120.202%2c1367.78%2c140.336%2c1348.182%2c171.323C1326.908%2c204.959%2c1313.798%2c246.994%2c1333.249%2c281.716C1353.024%2c317.016%2c1395.857%2c328.716%2c1436.319%2c328.656' fill='rgba(227%2c 117%2c 58%2c 0.33)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+ }
+
+ header {
+     padding: 20px 0;
+     overflow: hidden; /* Clearfix */
+     height: 7vh;
+ }
+
+ .logo {
+     float: left;
+ }
+
+ .logo img {
+     height: 50px;
+ }
+
+ .website-name {
+     float: left;
+     margin-top: 10px;
+ }
+
+ .website-name h1 {
+     margin: 0;
+     font-size: 24px;
+     color: #ffffff;
+     font-family: 'league-gothic', sans-serif ;
+ }
+
+ .nav-links {
+     float: right;
+     margin-top: 20px;
+ }
+
+ .nav-links ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .nav-links ul li {
+     display: inline;
+     margin-right: 20px;
+ }
+
+ .nav-links ul li a {
+     text-decoration: none;
+     color: #d5d0d0;
+     font-size: 15px;
+     font-family: 'league-gothic', sans-serif ;
+     font-weight: bold;
+ }
+
+ .nav-links ul li a:hover {
+     text-decoration: none;
+     color: #E3753A;
+     transition: color 0.3s ease;
+ }
+
+ main {
+     padding: 20px 0;
+ }
+
+ footer {
+     text-align: center;
+     padding: 10px 0;
+     color: #45484c;
+     height: 3vh;
+     font-size: 10px;
+ }
+
+ section {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 90vh;
+ }
+
+ .blob {
+     position: absolute;
+     height: 700px;
+     width: 700px;
+ }
+
+ .blob:nth-child(2) {
+     filter: blur(50px);
+ }

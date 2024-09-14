@@ -1,0 +1,13 @@
+.info {
+    z-index: 3;
+    font-family: 'league-gothic', sans-serif ;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.highlight {
+    background: linear-gradient(to right, #70169e, #4b1fa5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
