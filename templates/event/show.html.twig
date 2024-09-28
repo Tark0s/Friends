@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ event.name }} Details{% endblock %}
+
+{% block blob %}
+    <h1>{{ event.name }}</h1>
+
+    <div class="event-details">
+        <p><strong>Date:</strong> {{ event.date|date('Y-m-d') }}</p>
+        <p><strong>Type:</strong> {{ event.type }}</p>
+        <p><strong>Color:</strong> {{ event.color }}</p>
+        <p><strong>Organiser:</strong> {{ event.organiser }}</p>
+        <p><strong>Location:</strong> {{ event.place }}</p>
+        <p><strong>Description:</strong> {{ event.description }}</p>
+        <p><strong>Guests:</strong>
+            {% if event.guests is not empty %}
+        <ul>
+            {% for guest in event.guests %}
+                <li>{{ guest }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            No guests listed.
+        {% endif %}
+        </p>
+        <p><strong>Created at:</strong> {{ event.createdAt|date('Y-m-d H:i:s') }}</p>
+        <p><strong>Updated at:</strong> {{ event.updatedAt|date('Y-m-d H:i:s') }}</p>
+    </div>
+{% endblock %}
