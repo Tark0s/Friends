@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block blob %}
+    {% for flash_error in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+    <form class="bg-amber-100 p-4 rounded-md mt-8 space-y-6" action="#" method="POST">
+        <div class="rounded-md -space-y-px">
+            <div class="font-roboto text-5xl font-bold text-center text-amber-600 shadow-lg p-4 mb-5 rounded-lg bg-white">
+                <p>Welcome!</p>
+                <p class="text-amber-400 text-2xl">Let's get you registered</p>
+            </div>
+            <div>
+                <label for="name" class="sr-only">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required
+                       class="rounded-xl relative block w-full px-3 py-2 border appearance-none rounded-t-md warm-border focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                       placeholder="Name">
+            </div>
+            <div class="pt-2">
+                <label for="email-address" class="sr-only">Email address</label>
+                <input id="email-address" name="email" type="email" autocomplete="email" required
+                       class="rounded-xl relative block w-full px-3 py-2 border appearance-none warm-border focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                       placeholder="Email address">
+            </div>
+            <div class="pt-2">
+                <label for="password" class="sr-only">Password</label>
+                <input id="password" name="password" type="password" autocomplete="new-password" required
+                       class="rounded-xl relative block w-full px-3 py-2 border appearance-none warm-border focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                       placeholder="Password">
+            </div>
+            <div class="pt-2">
+                <label for="password-confirmation" class="sr-only">Confirm password</label>
+                <input id="password-confirmation" name="password_confirmation" type="password" autocomplete="new-password" required
+                       class="rounded-xl relative block w-full px-3 py-2 border appearance-none rounded-b-md warm-border focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                       placeholder="Confirm password">
+            </div>
+            <div class="pt-2">
+                <label for="access-token" class="sr-only">Access token</label>
+                <input id="access-token" name="access_token" type="text" required
+                       class="rounded-xl relative block w-full px-3 py-2 border appearance-none rounded-b-md warm-border focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                       placeholder="Access token">
+            </div>
+        </div>
+
+        <div class="m-3 text-sm">
+            <a href="{{ path('app_login') }}" class="text-orange-500 font-medium hover:text-indigo-500">
+                Already have an account?
+            </a>
+        </div>
+
+        <div>
+            <button type="submit"
+                    class="bg-orange-400 flex justify-center w-full px-4 py-2 font-medium rounded-md group hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Sign up
+            </button>
+        </div>
+    </form>
+
+{% endblock %}

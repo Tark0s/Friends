@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block blob %}
+    <form class="bg-amber-100 p-4 mt-8 space-y-6" method="post">
+        <div class="rounded-md -space-y-px">
+            <div class="font-roboto text-5xl font-bold text-center text-amber-600 shadow-lg p-4 mb-5 rounded-lg bg-white">
+                <p>Welcome!</p>
+                <p class="text-amber-400 text-2xl">Log in and get moving</p>
+            </div>
+            {% if error %}
+                <div class="bg-red-200 my-2 rounded-xl relative block w-full px-3 py-2 appearance-none focus:z-10 sm:text-sm">
+                    <a class="text-red-500 font-medium"> {{ error.messageKey|trans(error.messageData, 'security') }} </a>
+                </div>
+            {% endif %}
+            <div>
+                <label for="email-address" class="sr-only">Email address</label>
+                <input id="email-address" name="email" type="email" autocomplete="email" required
+                       class="rounded-xl relative block w-full px-3 py-2 border appearance-none focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                       placeholder="Email address">
+            </div>
+            <div class="pt-2">
+                <label for="password" class="sr-only">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required
+                       class="rounded-xl relative block w-full px-3 py-2 border appearance-none focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                       placeholder="Password">
+            </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+            <div class="m-3 text-sm">
+                <a href="#" class="text-orange-500 font-medium hover:text-indigo-500">
+                    Forgot your password?
+                </a>
+            </div>
+
+            <div class="m-3 text-sm ">
+                <a href="{{ path('app_register') }}" class="text-orange-500 font-medium hover:text-indigo-500">
+                    Don't have an account?
+                </a>
+            </div>
+        </div>
+
+        <div class=" flex items-center">
+            <input id="_remember_me" name="_remember_me" type="checkbox"
+                   class="ml-2 accent-orange-500 w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+            <label for="_remember_me" class="text-orange-400 block ml-2 text-sm">
+                Remember me
+            </label>
+        </div>
+
+        {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <input type="checkbox" name="_remember_me" id="_remember_me" class="h-4 w-4 text-indigo-600 border-gray-300 rounded">
+            <label for="_remember_me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+        </div>
+        #}
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <button type="submit"
+                class="bg-orange-400 flex justify-center w-full px-4 py-2 font-medium rounded-md group hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Login
+        </button>
+    </form>
+{% endblock %}
+

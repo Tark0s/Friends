@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+    <div class="container mx-auto mt-10">
+        <h1 class="text-orange-300 text-3xl font-bold mb-6">User Information</h1>
+
+        <table class="min-w-full leading-normal">
+            <tbody>
+            <tr class="border-b">
+                <th class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                    Id
+                </th>
+                <td class="px-5 py-3 bg-white text-sm">{{ user.id }}</td>
+            </tr>
+            <tr class="border-b">
+                <th class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                    First Name
+                </th>
+                <td class="px-5 py-3 bg-white text-sm">{{ user.firstName }}</td>
+            </tr>
+            <tr class="border-b">
+                <th class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                    Email
+                </th>
+                <td class="px-5 py-3 bg-white text-sm">{{ user.email }}</td>
+            </tr>
+            <tr class="border-b">
+                <th class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                    Verified
+                </th>
+                <td class="px-5 py-3 bg-white text-sm">{{ user.isVerified ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr class="border-b">
+                <th class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                    Roles
+                </th>
+                <td class="px-5 py-3 bg-white text-sm">{{ user.roles|join(', ') }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

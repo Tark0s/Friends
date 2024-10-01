@@ -4,7 +4,7 @@
             <meta charset="UTF-8">
             <title>{% block title %}FriEnds{% endblock %}</title>
             <link rel="icon" href="{{ asset('icons/calendar.svg') }}">
-            <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
@@ -15,23 +15,26 @@
         </head>
 
         <body>
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <i class="fa-regular fa-calendar"></i>
+        <header class="text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="float-left text-2xl font-bold">
+                    FriEnds.com
                 </div>
-                <div class="website-name">
-                    <h1 class="league-gothic">FriEnds.com</h1>
-                </div>
+                <nav>
+                    <ul class="flex space-x-4 text-lg">
+                        <li><a href="{{ path('app_homepage') }}" class="m-2 nav-links">Home</a></li>
+                        <li><a href="https://github.com/Tark0s/Friends/blob/master/README.md" target="_blank" class="m-2 nav-links">About</a></li>
 
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="{{ path('app_homepage') }}">Home</a></li>
-                        <li><a href="https://github.com/Tark0s/Friends/blob/master/README.md" target="_blank">About</a></li>
-                        <li><a href="{{ path('app_login') }}">Login</a></li>
-                        <li><a href="{{ path('app_register') }}">Register</a></li>
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li><a href="{{ path('app_homepage') }}" class="m-2 nav-links">Friends</a></li>
+                            <li><a href="{{ path('app_profile') }}" class="m-2 nav-links">Profile</a></li>
+                            <li><a href="{{ path('app_logout') }}" class="m-2 nav-links">Logout</a></li>
+                        {% else %}
+                            <li><a href="{{ path('app_login') }}" class="m-2 nav-links">Login</a></li>
+                            <li><a href="{{ path('app_register') }}" class="m-2 nav-links">Register</a></li>
+                        {% endif %}
                     </ul>
-                </div>
+                </nav>
             </div>
         </header>
 
@@ -81,12 +84,13 @@
 {#                </svg>#}
 {#            </div>#}
             {% block blob %}{% endblock %}
+            {% block body %}{% endblock %}
         </section>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
 
-        <footer>
+        <footer class="text-orange-900 text-center py-2 h-[3vh] text-xs">
             <p>&copy; {{ "now"|date("Y") }} Fri-ends. All rights reserved.</p>
         </footer>
         </body>
